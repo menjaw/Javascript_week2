@@ -103,13 +103,12 @@ console.log("Sorted boy-array: " + boys.sort());
 console.log("Sorted array: " + all.sort());*/
 
 
-console.log(girls.map(function(i){return i.toUpperCase}));
+console.log(girls.map(function(i){return i.toUpperCase(); }));
 
-//var toUpper = girls.join("- ");
-//toUpper.toLocaleUpperCase();
-//console.log(toUpper);
+var toUpper = "testerString";
+var str = toUpper.toUpperCase();
+console.log(str);
 
 console.log("This is now a string: " + girls.toString());
 
-//console.log(girls.map());
 
