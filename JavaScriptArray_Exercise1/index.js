@@ -146,3 +146,24 @@ console.log(str);
 console.log("This is now a string: " + girls.toString());
 
 
+
+//ARRAY FILTER METHOD
+//Ages
+var ages = [12, 33, 95, 21, 56, 44, 82, 28, 10, 11, 8, 4, 9, 2];
+function checkAge(age){
+return age >= 18;
+}
+function allowedAges(){
+    console.log(ages.filter(checkAge));//creates a new array that contains the allowed ages
+}
+console.log(allowedAges());
+
+//Names
+var names = ["Torben", "Sille", "Gert", "Klaus", "Henning", "Alfred", "Anna", "Ib", "Lilly"];
+function checkNames(incomingName){
+    return incomingName == "Alfred";
+}
+function allowedNames(){
+console.log(names.filter(checkNames));
+}
+console.log(allowedNames());
