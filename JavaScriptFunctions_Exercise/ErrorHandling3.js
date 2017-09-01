@@ -24,7 +24,7 @@ console.log(cb(3, " String", add));
 
 
 //Checking arguments
-typeof i1 === "number" //Will fail if i1 is undefined or not a number
-typeof i2 === "number" //Will fail if i2 is undefined or not a number
+typeof i1  //Will fail if i1 is undefined or not a number
+typeof i2 //Will fail if i2 is undefined or not a number
 
-console.log(add("fail ", "Mother biip"));
+console.log(add());
