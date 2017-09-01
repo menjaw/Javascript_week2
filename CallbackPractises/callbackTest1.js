@@ -4,6 +4,7 @@
 var friends = ["Pierre", "David", "Stacey", "Sofie"];
 
 //Here we pass an anonymous function as a parameter
+//Doesn't do anything else
 friends.forEach(function (eachItem, index) {
     console.log(index + 1 + ":" + eachItem);
 });
@@ -11,7 +12,7 @@ friends.forEach(function (eachItem, index) {
 
 //Here we create a test callback function
 function useCallback(callback, callback2) {
-    console.log("This is the function that is used to run the callback function");
+    console.log("This is the function that is used to run the callback functions");
     callback();
     callback2();
 }

@@ -136,9 +136,10 @@ bookNames.push("Array", "Mon");
 bookNames.sort();
 console.log(bookNames);
 
-
+//MAP
 console.log(girls.map(function (i) { return i.toUpperCase(); }));
 
+//Another way to map
 var toUpper = "testerString";
 var str = toUpper.toUpperCase();
 console.log(str);

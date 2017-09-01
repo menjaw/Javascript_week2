@@ -1,9 +1,4 @@
-var friends = ["Pierre", "David", "Stacey", "Sofie"];
 
-//Pass an anonymous function as a parameter
-friends.forEach(function (eachItem, index) {
-    console.log(index + 1 + ":" + eachItem);
-});
 
 
 var bookNames = ["Learn JavaScript", "JPA", "Linux", "Server Installation"];

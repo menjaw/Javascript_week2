@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <div id="app"></div>
+
+        <!--Træk data fra en server med nedenstående script-->
+        <script>
+            var app = document.getElementById("app");
+            var url = "http://localhost:8084/AjaxJsonTest_day4/PersonControl";
+            var conf = {method: 'get'};
+            var promise = fetch(url, conf);
+            promise.then(function (response) {
+                return response.text();
+            }).then(function (text) {
+                console.log(text);
+                app.innerHTML = text;
+            });
+        </script>
+    </body>
+</html>
