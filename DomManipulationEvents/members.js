@@ -4,8 +4,10 @@
 /*ONE WAY TO DO IT (useful way)*/
 //Declare variable
 var lastnames = ["Vanderpump", "Richardson", "Dickson", "Carlsson", "Birk", "Lennon"];
+
+
 //Automatic: Creates a function that can be called and used to different arrays
-//Creates array. Puts the value from the old array in a list and then store it in the new array
+//Map creates array. Puts the value from the old array in a list and then store it in the new array
 function mapArrays(array) {
     var newList = array.map(function (name) {
         console.log(name);
@@ -14,28 +16,57 @@ function mapArrays(array) {
     return newList.join("");
 }
 
+
+
 //Maps the array lastnames and save it in a variable we can print out to the html page
 var lastnameList = mapArrays(lastnames);
-
 
 //Prints out the new arrays at the html page
 document.getElementById("lastnameList").innerHTML = lastnameList;
 
 
+
+//FUNCTIONS
 //Function to add new user
-function addlastname(lastname) {
-    lastnames.push(lastname);
+function addlastname(element) {
+    lastnames.push(element);
+    document.getElementById("lastnameList").innerHTML = mapArrays(lastnames);
+}
+
+//Function to remove first element in array
+function removeFirstElement() {
+    lastnames.shift();
+    document.getElementById("lastnameList").innerHTML = mapArrays(lastnames);
+}
+
+//Function to remove last element in array
+function removeLastElement() {
+    lastnames.pop();
     document.getElementById("lastnameList").innerHTML = mapArrays(lastnames);
 }
 
 
-//When button is clicked
+
+
+//WHEN BUTTON IS CLICKED
+//add element
 document.getElementById("btnSubmit").onclick = function (event) {
     event.preventDefault();
     var input = document.getElementById("input").value;
     addlastname(input);
 }
 
+//remove first element
+document.getElementById("btnRemoveFirst").onclick = function (event) {
+    event.preventDefault();
+    removeFirstElement();
+}
+
+//remove last element
+document.getElementById("btnRemoveLast").onclick = function (event) {
+    event.preventDefault();
+    removeLastElement();
+}
 
 // /*ANOTHER WAY (not so useful)*/
 // //Declare variables
